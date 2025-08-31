@@ -1,0 +1,40 @@
+package com.example.savenotes.feature_note.presentation.notes.components
+
+import android.widget.RadioButton
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RadioButton
+import androidx.compose.material3.RadioButtonDefaults
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.wear.compose.material.ContentAlpha
+
+@Composable
+fun DefaultRadioButton(
+    modifier: Modifier = Modifier,
+    text: String,
+    selected: Boolean,
+    onSelect: () -> Unit
+) {
+    Row(
+        modifier = modifier,
+        verticalAlignment = Alignment.CenterVertically
+    ){
+        RadioButton(
+            selected = selected,
+            onClick = onSelect,
+             colors = RadioButtonDefaults.colors(
+                 selectedColor = MaterialTheme.colorScheme.primary,
+                 unselectedColor = MaterialTheme.colorScheme.onBackground,
+                 disabledColor = MaterialTheme.colorScheme.onBackground.copy(alpha = ContentAlpha.disabled)
+             )
+        )
+        Spacer(modifier = Modifier.width(8.dp))
+        Text(
+            text = text,
+            style = MaterialTheme.typography.bodyLarge
+        )
+    }
+}

@@ -78,6 +78,7 @@ dependencies {
 
     // Dagger - Hilt (Updated and Corrected)
     implementation(libs.hilt.android)
+    implementation(libs.androidx.compose.material)
     ksp(libs.hilt.compiler) // Using ksp instead of kapt
 
     // Room (Updated)
