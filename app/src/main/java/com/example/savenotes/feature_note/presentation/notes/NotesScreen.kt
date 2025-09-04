@@ -40,10 +40,11 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.savenotes.feature_note.presentation.notes.components.NoteItem
 import com.example.savenotes.feature_note.presentation.notes.components.OrderSection
+import com.example.savenotes.feature_note.presentation.util.Screen
 import kotlinx.coroutines.launch
 
 @Composable
-fun NoteScreen(
+fun NotesScreen(
     modifier: Modifier = Modifier,
     navController: NavController,
     viewModel: NotesViewModel = hiltViewModel()
@@ -56,6 +57,7 @@ fun NoteScreen(
         floatingActionButton = {
             FloatingActionButton(
                 onClick = {
+                    navController.navigate(Screen.AddEditNoteScreen.route)
                 },
 
                 containerColor = MaterialTheme.colorScheme.primary

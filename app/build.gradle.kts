@@ -10,12 +10,12 @@ plugins {
 
 android {
     namespace = "com.example.savenotes"
-    compileSdk = 34 // Using 34 as it's the current stable API level. Change to 35/36 if you have it installed.
+    compileSdk = 36 // Using 34 as it's the current stable API level. Change to 35/36 if you have it installed.
 
     defaultConfig {
         applicationId = "com.example.savenotes"
-        minSdk = 24
-        targetSdk = 34
+        minSdk = 25
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
